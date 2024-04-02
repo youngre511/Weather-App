@@ -3,8 +3,9 @@
 	<%- include("./partials/head") %>
 	<body>
 		<%- include("./partials/header")%>
-
-		<h2>Your 5-Day Forecast</h2>
+		<% if(Object.keys(data).length > 0) {%>
+			<h2>Your 5-Day Forecast</h2>
+		<%}%>
 		<% if (error) {%>
 		<h2 class="error"><%=error%></h2>
 		<%}%> <% if (Object.keys(data).length > 0) {%>

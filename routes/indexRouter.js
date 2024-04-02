@@ -4,7 +4,6 @@ const router = express.Router();
 const dataParser = require("../data-parser");
 require("dotenv").config();
 const APIkey = process.env.API_KEY;
-console.log(APIkey)
 
 router.get("/", (req, res) => {
 	res.render("home", { data: {}, error: "" });
