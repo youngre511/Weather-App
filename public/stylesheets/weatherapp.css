@@ -1,200 +1,199 @@
-* {box-sizing: border-box;}
+* {
+	box-sizing: border-box;
+}
 
 body {
-    color: white;
-    font-family: 'DM Sans', sans-serif;
-    background-color: lightblue;
-    margin: 0;
+	color: white;
+	font-family: "DM Sans", sans-serif;
+	background-color: lightblue;
+	margin: 0;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: darkblue;
-    margin: 0;
-    color: white;
-    padding: 5px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: darkblue;
+	margin: 0;
+	color: white;
+	padding: 5px 20px;
 }
 
 h1 {
-    text-align: center;
-    color: white;
+	text-align: center;
+	color: white;
 }
 
 form {
-    background-color: darkblue;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+	background-color: darkblue;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
 }
 
 input {
-    font-family: 'DM Sans', sans-serif;
-    padding: 2px 5px;
+	font-family: "DM Sans", sans-serif;
+	padding: 2px 5px;
 }
 
 button {
-    background-color: lightblue;
-    border-radius: 10px;
-    padding: 5px;
-    margin-left: 20px;
-    font-family: 'DM Sans', sans-serif;
+	background-color: lightblue;
+	border-radius: 10px;
+	padding: 5px;
+	margin-left: 20px;
+	font-family: "DM Sans", sans-serif;
 }
 
-h2{
-    text-align: center;
-    color: black;
+h2 {
+	text-align: center;
+	color: black;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+	text-decoration: none;
+	color: black;
 }
 
 .error {
-    text-align: center;
-    padding: 20px;
-    color: white;
-    background-color: darkblue;
+	text-align: center;
+	padding: 20px;
+	color: white;
+	background-color: darkblue;
 }
 
 .five-day-forecast {
-    background-color: darkblue;
-    display: flex;
-    padding: 30px 20px;
-    justify-content: space-between;
+	background-color: darkblue;
+	display: flex;
+	padding: 30px 20px;
+	justify-content: space-between;
 }
 
-
 .five-day-div {
-    display: flex;
-    flex-direction: column;
-    width: 15.5vw;
-    background-color: lightblue;
-    margin: 0 5px;
-    color: black;
-    cursor: pointer;
-    height: 311.5px;
-    box-shadow: 5px 5px 10px black;
+	display: flex;
+	flex-direction: column;
+	width: 15.5vw;
+	background-color: lightblue;
+	margin: 0 5px;
+	color: black;
+	cursor: pointer;
+	height: 311.5px;
+	box-shadow: 5px 5px 10px black;
 }
 
 .five-day-div h3 {
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-    border: lightblue 2px solid;
-    margin: 0;
-    padding: 10px;
-    background-color: darkblue;
-    color: white;
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	border: lightblue 2px solid;
+	margin: 0;
+	padding: 10px;
+	background-color: darkblue;
+	color: white;
 }
 
 .five-day-hourly-div {
-    display: flex;
-    flex-direction: column;
-    padding: 10px 40px;
+	display: flex;
+	flex-direction: column;
+	padding: 10px 40px;
 }
 
 .five-day-time-div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .five-day-div img {
-    height: 40px;
-    width: auto;
-    margin: -5px 0;
+	height: 40px;
+	width: auto;
+	margin: -5px 0;
 }
 
 .five-day-time-div {
-    display: flex;
+	display: flex;
 }
 
 .five-day-time-div p {
-    margin: 4px 0;
+	margin: 4px 0;
 }
 
 .five-day-info-div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 80px;
 }
 
-
-
 .forecast {
-    display: flex;
-    flex-direction: column;
-    background-color: darkblue;
-    padding: 20px;
+	display: flex;
+	flex-direction: column;
+	background-color: darkblue;
+	padding: 20px;
 }
 
 .day-div {
-    display: flex;
-    flex-direction: column;
-    margin: 10px 0;
+	display: flex;
+	flex-direction: column;
+	margin: 10px 0;
 }
 
 .day-display {
-    margin: 10px;
+	margin: 10px;
 }
 
 .times {
-    overflow-x: scroll;
-    white-space: nowrap;
+	overflow-x: scroll;
+	white-space: nowrap;
 }
 
 .time-div {
-    display: inline-block;
-    width: 280px;
-    margin: 10px;
-    box-shadow: 5px 5px 10px black;
+	display: inline-block;
+	width: 280px;
+	margin: 10px;
+	box-shadow: 5px 5px 10px black;
 }
 
 .time-container {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .time-disp {
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-    border: lightblue 2px solid;
-    margin: 0;
-    padding: 10px;
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	border: lightblue 2px solid;
+	margin: 0;
+	padding: 10px;
 }
 
 .info-div {
-    display: inline-block;
-    background-color: lightblue;
-    color: black;
-    padding: 0 20px 20px 20px;
+	display: inline-block;
+	background-color: lightblue;
+	color: black;
+	padding: 0 20px 20px 20px;
 }
 
 .info-header {
-    display: flex;
-    justify-content: space-around;
+	display: flex;
+	justify-content: space-around;
 }
 
 .info {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .info p {
-    margin: 8px 0;
+	margin: 8px 0;
 }
 .temperature {
-    font-size: 2rem;
+	font-size: 2rem;
 }
 
 .back {
-    background-color: whitesmoke;
-    margin-top: 20px;
+	background-color: whitesmoke;
+	margin-top: 20px;
 }
