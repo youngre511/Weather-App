@@ -13,5 +13,5 @@ app.use(express.urlencoded({ extended: false }));
 const indexRouter = require("./routes/indexRouter");
 app.use("/", indexRouter);
 
-const PORT = 3000;
+const PORT = 10000;
 app.listen(PORT, () => console.log(`server listening at port ${PORT}`));

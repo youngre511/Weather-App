@@ -2,6 +2,7 @@ const express = require("express");
 const axios = require("axios");
 const router = express.Router();
 const dataParser = require("../data-parser");
+require("dotenv").config();
 const APIkey = process.env.API_KEY;
 
 router.get("/", (req, res) => {
