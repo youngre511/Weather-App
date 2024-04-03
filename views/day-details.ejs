@@ -1,56 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-	<%- include("./partials/head") %>
-	<body>
-		<%- include("./partials/header.ejs")%>
+  <%- include("./partials/head") %>
+  <body>
+    <%- include("./partials/header.ejs")%>
 
-		<h2><%=day%>'s Hourly Forecast</h2>
+    <h2><%=day%>'s Hourly Forecast</h2>
 
-		<% if (Object.keys(data).length > 0) {%>
-		<div class="forecast">
-			<div class="day-div">
-				<%let dayObj = data%>
-				<div class="times">
-					<%for (time in dayObj) {%>
-					<div class="time-div">
-						<div class="time-container">
-							<h3 class="time-disp"><%=time%></h3>
-							<div class="info-div">
-								<%let timeObj = dayObj[time]%>
-								<div class="info-header">
-									<p class="temperature"><%=timeObj.temperature%>&deg;F</p>
-									<img src="<%=timeObj.iconAddress%>" />
-								</div>
-								<div class="info">
-									<p>Feels Like:</p>
-									<p><%=timeObj.feelsLike%>&deg;F</p>
-								</div>
-								<div class="info">
-									<p>Conditions:</p>
-									<p><%=timeObj.conditions%></p>
-								</div>
-								<div class="info">
-									<p>Wind Speed:</p>
-									<p><%=timeObj.windSpeed%> mph</p>
-								</div>
-								<div class="info">
-									<p>Wind Gusts:</p>
-									<p><%=timeObj.windGusts%> mph</p>
-								</div>
-								<div class="info">
-									<p>Chance of Precipitation:</p>
-									<p><%=timeObj.precipProb%>%</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<%}%>
-				</div>
-			</div>
-		</div>
-		<%}%>
-		<button class="back">
-			<a href="javascript:history.go(-1)">< Back to 5-Day Forecast</a>
-		</button>
-	</body>
+    <% if (Object.keys(data).length > 0) {%>
+    <div class="forecast">
+      <div class="day-div">
+        <%let dayObj = data%>
+        <div class="times">
+          <%for (time in dayObj) {%>
+          <div class="time-div">
+            <div class="time-container">
+              <h3 class="time-disp"><%=time%></h3>
+              <div class="info-div">
+                <%let timeObj = dayObj[time]%>
+                <div class="info-header">
+                  <p class="temperature"><%=timeObj.temperature%>&deg;F</p>
+                  <img src="<%=timeObj.iconAddress%>" />
+                </div>
+                <div class="info">
+                  <p>Feels Like:</p>
+                  <p><%=timeObj.feelsLike%>&deg;F</p>
+                </div>
+                <div class="info">
+                  <p>Conditions:</p>
+                  <p><%=timeObj.conditions%></p>
+                </div>
+                <div class="info">
+                  <p>Wind Speed:</p>
+                  <p><%=timeObj.windSpeed%> mph</p>
+                </div>
+                <div class="info">
+                  <p>Wind Gusts:</p>
+                  <p><%=timeObj.windGusts%> mph</p>
+                </div>
+                <div class="info">
+                  <p>Chance of Precipitation:</p>
+                  <p><%=timeObj.precipProb%>%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <%}%>
+        </div>
+      </div>
+    </div>
+    <%}%>
+    <button class="back">
+      <a href="javascript:history.go(-1)">< Back to 5-Day Forecast</a>
+    </button>
+  </body>
 </html>

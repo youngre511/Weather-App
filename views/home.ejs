@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-	<%- include("./partials/head") %>
-	<body>
-		<%- include("./partials/header")%>
-		<% if(Object.keys(data).length > 0) {%>
-			<h2>Your 5-Day Forecast</h2>
-		<%}%>
-		<% if (error) {%>
-		<h2 class="error"><%=error%></h2>
-		<%}%> <% if (Object.keys(data).length > 0) {%>
-		<div class="five-day-forecast">
-			<% for(day in data) {%> <% let coordinate =
-			data[day][Object.keys(data[day])[0]].coord%> <%let link =
-			`/${coordinate}/${day}`%>
-			<a href="<%=link%>">
-				<div class="five-day-div">
-					<h3 class="day-display"><%=day%></h3>
-					<div class="five-day-hourly-div">
-						<%let dayObj = data[day]%> <%for (time in dayObj) {%> <%let timeObj
-						= dayObj[time]%>
-						<div
-							class="five-day-time-div"
-							id="<%=timeObj.lat%>, <%=timeObj.lon%>">
-							<p class="five-day-time-display"><%=timeObj.timeAbb%></p>
-							<div class="five-day-info-div">
-								<img src="<%=timeObj.iconAddress%>" />
-								<p class="five-day-temperature">
-									<%=timeObj.temperature%>&deg;F
-								</p>
-							</div>
-						</div>
-						<%}%>
-					</div>
-				</div>
-			</a>
-			<%}%>
-		</div>
-		<% }%>
-	</body>
+  <%- include("./partials/head") %>
+  <body>
+    <%- include("./partials/header")%> <% if(Object.keys(data).length > 0) {%>
+    <h2>Your 5-Day Forecast</h2>
+    <%}%> <% if (error) {%>
+    <h2 class="error"><%=error%></h2>
+    <%}%> <% if (Object.keys(data).length > 0) {%>
+    <div class="five-day-forecast">
+      <% for(day in data) {%> <% let coordinate =
+      data[day][Object.keys(data[day])[0]].coord%> <%let link =
+      `/${coordinate}/${day}`%>
+      <a href="<%=link%>">
+        <div class="five-day-div">
+          <h3 class="day-display"><%=day%></h3>
+          <div class="five-day-hourly-div">
+            <%let dayObj = data[day]%> <%for (time in dayObj) {%> <%let timeObj
+            = dayObj[time]%>
+            <div
+              class="five-day-time-div"
+              id="<%=timeObj.lat%>, <%=timeObj.lon%>"
+            >
+              <p class="five-day-time-display"><%=timeObj.timeAbb%></p>
+              <div class="five-day-info-div">
+                <img src="<%=timeObj.iconAddress%>" />
+                <p class="five-day-temperature">
+                  <%=timeObj.temperature%>&deg;F
+                </p>
+              </div>
+            </div>
+            <%}%>
+          </div>
+        </div>
+      </a>
+      <%}%>
+    </div>
+    <% }%>
+  </body>
 </html>
